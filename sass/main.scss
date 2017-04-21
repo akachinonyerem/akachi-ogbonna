@@ -3,6 +3,7 @@
 @import "core/reset-min";
 @import "core/fonts";
 @import "core/variables";
+@import "core/mixin";
 
 * {
     font-family: 'Sofia Pro Soft', 'Helvetica Nueue', sans-serif;
@@ -107,9 +108,9 @@ h1{
 //     align-items: center;
 // }
 
-.l-intro{
+.header { 
 	width: 100%;
-	height: 68rem;
+	min-height: 68rem;
 	background-color: $color-white;
 	display: flex;
 	justify-content: center;
@@ -117,70 +118,55 @@ h1{
 	margin-bottom: 16rem;
 }
 
-.intro {
-	background-color: white;
-	width: 82rem;
-	// height: 68rem;
-	color: $color-blue;
-	justify-content: space-between;
-	// align-items: center;
-	font-size: 3.3rem;
-	padding-top: -16rem;
-	display: flex;
+.l-intro {
+	@include flex-layout;
+	background-color: $color-white;
+	margin-top: 10rem;
+	margin-bottom: 16rem;
 
+}
+
+.intro {
+	@include flex-inner;
+	color: $color-blue;
+	font-size: 3.3rem;
+	// padding-top: -16rem;
 	span{
 		color: $color-red;
 		}
 	
 	h1{
-		width: 54rem;
+		max-width: 54rem;
 	}
 }
 
 
 .midsection {
+	@include flex-layout;
 	background-color: $color-mainbg;
-	display: flex;
-	padding: 0 7rem;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 25rem;
-	padding-bottom: 5rem;
+	min-height: 25rem;
+	padding-bottom: 5%;
 }
 
 .l-midsection{
+	@include flex-layout;
 	background-color: $color-mainbg;
-	display: flex;
-	padding: 0 7rem;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding-bottom: 5rem;
+	padding-bottom: 5%;
 }
 
 .l-skillset{
+	@include flex-layout;
 	margin-top: -25rem;
-	height: 50rem;
-	width: 100%;
-	display: flex;
-	justify-content: center; 
-	align-items: center;
+	min-height: 50rem;
 	background-color: $color-bg-blue;
 }
 
 .skillset{
+	@include flex-inner;
 	background-color: $color-bg-blue;
-	// background: url('img/multicolorbg.png') no repeat;
-	width: 82rem;
-	// height: 500rem;
 	color: $color-white;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
 	a{
 		color: $color-white;
 	}
@@ -188,11 +174,8 @@ h1{
 
 
 .l-interest{
-	height: 47rem;
-	width: 100%;
-	display: flex;
-	justify-content: center; 
-	align-items: center;
+	@include flex-layout;
+	min-height: 47rem;
 	background-color: $color-white;
 	// margin-bottom: -53rem;
 
@@ -200,11 +183,8 @@ h1{
 
 
 .interest {
+	@include flex-inner;
 	background-color: $color-white;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 82rem;
 	color: $color-black;
 	a{
 		color: $color-black;
@@ -216,21 +196,15 @@ h1{
 
 
 .l-contact {
-	width: 100%;
-	display: flex;
-	height: 50rem;
-	justify-content: center; 
-	align-items: center;
+	@include flex-layout;
+	min-height: 50rem;
 	background-color: $color-bg-yellow;	
 }
 
 .contact{
+	@include flex-inner; 
 	background-color: $color-bg-yellow;	
 	color: $color-yellblue;
-	display: flex;
-	align-items: center;
-	width: 82rem;
-	justify-content: space-between;
 	a, h1 {
 		color: $color-yellblue;
 
@@ -239,7 +213,7 @@ h1{
 
 .subtext {
 	font-size: 1.8rem;
-	width:54rem;
+	max-width: 54rem;
 	line-height: 3rem;
 	font-style: normal;
 	font-weight: normal;
@@ -250,14 +224,15 @@ h1{
 }
 
 .footer{
-	width: 100%;
-	height: 5rem;
-	display: flex;
-	justify-content: center; 
-	align-items: center;
+	@include flex-layout;
+	min-height: 5rem;
 	background-color: $color-bg-yellow;	
 	color: $color-yellblue;
 	font-size: 1.4rem;
 	font-weight: normal;
 	font-style: normal;
+}
+.img {
+	display: flex;
+	padding-bottom: 2rem;
 }
