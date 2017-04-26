@@ -235,6 +235,7 @@ h1{
 	@include flex-layout;
 	margin-top: -25rem;
 	min-height: 50rem;
+	padding-top: 10rem;
 	background-color: $color-bg-blue;
 }
 
@@ -252,7 +253,7 @@ h1{
 	@include flex-layout;
 	min-height: 47rem;
 	background-color: $color-white;
-	// margin-bottom: -53rem;
+	padding-top: 10rem;
 
 }
 
@@ -273,7 +274,8 @@ h1{
 .l-contact {
 	@include flex-layout;
 	min-height: 50rem;
-	background-color: $color-bg-yellow;	
+	background-color: $color-bg-yellow;
+	padding-top: 10rem;	
 }
 
 .contact{
